@@ -127,7 +127,7 @@ html {
   font-size: 62.5%;
 }
 body {
-    background: linear-gradient(to right, #434343 0%, black 100%);
+    background: #360745;
     color: #fff;
     font-size: 1.6rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -177,13 +177,14 @@ img {
     color: #000;
 }
 .carrocel__price {
-    font-size: 1.8rem;
     margin-top: 10px auto;
+    font-size: 1.8rem;
+    font-weight: 700;
     color: #360745;
 }
 .carrocel__txt {
     margin-top: 10px;
-    color: #333;
+    color: #444;
 }
 .carrocel__btn {
     display: flex;
@@ -192,7 +193,7 @@ img {
     width: 40px;
     height: 40px;
     background-color: transparent;
-    color: #fff;
+    color: #e7d84b;
     border: none;
     cursor: pointer;
 }
