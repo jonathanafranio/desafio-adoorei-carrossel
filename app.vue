@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 class="title-page">Carrossel - Desafio Front End Empresa Adoorei</h1>
-        <div class="loading" v-if="loading">Carregando os produtos...</div>
+        <Preload class="loading" v-if="loading" />
         <div class="carrocel" v-else>
             <button class="carrocel__btn" @click="prev" v-if="carrocel_active > 0">
                 <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,6 +37,7 @@
     </div>
 </template>
 <script>
+import Preload from './components/Preload.vue'
 
 export default {
     data() {
@@ -46,6 +47,9 @@ export default {
             carrocel_active: 0,
             classCard: ''
         }
+    },
+    components: {
+        Preload
     },
     methods: {
         async request_api(url) {
@@ -137,7 +141,8 @@ img {
     height: 100%;
 }
 .title-page {
-    margin-top: 10px;
+    margin: 15px;
+    font-size: 2.5rem;
     text-align: center;
 }
 .carrocel {
